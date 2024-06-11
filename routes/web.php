@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BibliotecaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -10,6 +11,8 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 });
+
+Route::get('/funcao', [BibliotecaController::class, 'funcao']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
