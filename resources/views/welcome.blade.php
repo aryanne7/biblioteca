@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
 </head>
 <body class="font-sans antialiased dark:bg-black dark:text-white/50">
     <div id="container">
@@ -23,9 +25,9 @@
                             @auth
                                 <a href="{{ url('/dashboard') }}" class="auth-link">Dashboard</a>
                             @else
-                                <a href="{{ route('login') }}" class="auth-link" style="margin-right:20px;">Log in</a>
+                                <a href="{{ route('login') }}" class="auth-link" style="margin-right:50px;">Log in</a>
                                 @if (Route::has('register'))
-                                    <a href="{{ route('register') }}" class="auth-link">Register</a>
+                                    <a href="{{ route('register') }}" class="auth-link" style="margin-right:200px;">Register</a>
                                 @endif
                             @endauth
                         </div>
