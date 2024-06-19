@@ -18,16 +18,17 @@
             <div id="header">
                 <h1>Biblioteca</h1>
             </div>
+
             <div id="auth">
                 @if (Route::has('login'))
                     <nav>
-                        <div style="display: flex; flex-direction:row;">
+                        <div style="display: flex; flex-direction:row; width: 100vw;height:90px; align-items: center;">
                             @auth
                                 <a href="{{ url('/dashboard') }}" class="auth-link">Dashboard</a>
                             @else
-                                <a href="{{ route('login') }}" class="auth-link" style="margin-right:50px;">Log in</a>
+                                <a href="{{ route('login') }}" class="auth-link" style="margin-left: 80vw">Log in</a>
                                 @if (Route::has('register'))
-                                    <a href="{{ route('register') }}" class="auth-link" style="margin-right:200px;">Register</a>
+                                    <a href="{{ route('register') }}" class="auth-link" style="margin-left: 40px">Register</a>
                                 @endif
                             @endauth
                         </div>
