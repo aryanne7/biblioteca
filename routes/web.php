@@ -35,5 +35,7 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('livros/{livro}', [LivroController::class, 'destroy'])->name('livros.destroy');
 });
 
+Route::get('/funcao', [LivroController::class, 'index']); // Exemplo: apontando para o método 'index'
+
 
 require __DIR__.'/auth.php';

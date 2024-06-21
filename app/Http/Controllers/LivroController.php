@@ -10,7 +10,13 @@ class LivroController extends Controller
     public function index()
     {
         $livros = Livro::latest()->paginate(10);
-        return view('livros.index', compact('livros'));
+        return view('index', compact('livros'));
+    }
+
+    public function funcao()
+    {
+        
+        return "Esta é a função 'funcao' do LivroController.";
     }
 
     public function create()
