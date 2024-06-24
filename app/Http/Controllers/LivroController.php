@@ -12,16 +12,9 @@ class LivroController extends Controller
         $livros = Livro::latest()->paginate(10);
         return view('index', compact('livros'));
     }
-
-    public function funcao()
-    {
-        
-        return "Esta é a função 'funcao' do LivroController.";
-    }
-
     public function create()
     {
-        return view('livros.create');
+        return view('create');
     }
 
     public function store(Request $request)
@@ -37,7 +30,7 @@ class LivroController extends Controller
 
         Livro::create($request->all());
 
-        return redirect()->route('livros.index')
+        return redirect()->route('index')
                          ->with('success', 'Livro cadastrado com sucesso!');
     }
 
