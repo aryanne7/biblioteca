@@ -16,6 +16,5 @@ class Livro extends Model
         'edicao',
         'editora',
         'ano_de_publicacao',
-        
     ];
 }

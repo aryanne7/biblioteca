@@ -61,7 +61,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Ano de Publicação:</strong>
-                        <input type="text" name="ano_publicacao" class="form-control" placeholder="Ano de Publicação">
+                        <input type="number" name="ano_publicacao" class="form-control" placeholder="Ano de Publicação">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">

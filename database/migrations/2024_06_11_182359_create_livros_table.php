@@ -16,11 +16,10 @@ return new class extends Migration
             $table->timestamps();
             $table->string("autor");
             $table->string("titulo");
-            $table->string("subtitulo");
-            $table->string("edicao");
-            $table->string("editora");
+            $table->string("subtitulo")->nullable();
+            $table->string("edicao")->nullable();
+            $table->string("editora")->nullable();
             $table->year('ano_de_publicacao')->nullable();
-            $table->timestamps();
             
         });
     }

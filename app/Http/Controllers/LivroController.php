@@ -23,9 +23,6 @@ class LivroController extends Controller
             'autor' => 'required',
             'titulo' => 'required',
             'subtitulo' => 'nullable',
-            'edicao' => 'nullable',
-            'editora' => 'nullable',
-            'ano_publicacao' => 'nullable|integer',
         ]);
 
         Livro::create($request->all());
