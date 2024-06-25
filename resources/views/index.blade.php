@@ -1,11 +1,21 @@
-@extends('layouts.app')
-
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabela de livros</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+</head>
+<body>
     <div class="container">
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
                     <h2>Lista de Livros</h2>
+                </div>
+                <div class="pull-right">
+                    <a class="btn btn-primary" href="{{ route('dashboard') }}"> Voltar</a>
                 </div>
                 <div class="pull-right">
                     <a class="btn btn-success" href="{{ route('livros.create') }}"> Criar Novo Livro</a>
@@ -38,10 +48,9 @@
                 <td>{{ $livro->subtitulo }}</td>
                 <td>{{ $livro->edicao }}</td>
                 <td>{{ $livro->editora }}</td>
-                <td>{{ $livro->ano_publicacao }}</td>
+                <td>{{ $livro->ano_de_publicacao }}</td>
                 <td>
                     <form action="{{ route('livros.destroy',$livro->id) }}" method="POST">
-                        <a class="btn btn-info" href="{{ route('livros.show',$livro->id) }}">Mostrar</a>
                         <a class="btn btn-primary" href="{{ route('livros.edit',$livro->id) }}">Editar</a>
                         @csrf
                         @method('DELETE')
@@ -52,6 +61,7 @@
             @endforeach
         </table>
 
-        {!! $livros->links() !!}
+        {!!  $livros->links('pagination::bootstrap-4')  !!}
     </div>
-@endsection
+</body>
+</html>

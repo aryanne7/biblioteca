@@ -9,7 +9,7 @@ class LivroController extends Controller
 {
     public function index()
     {
-        $livros = Livro::latest()->paginate(10);
+        $livros = Livro::latest()->paginate(7);
         return view('index', compact('livros'));
     }
     public function create()
@@ -23,11 +23,14 @@ class LivroController extends Controller
             'autor' => 'required',
             'titulo' => 'required',
             'subtitulo' => 'nullable',
+            'edicao' => 'nullable',
+            'editora' => 'nullable',
+            'ano_de_publicacao' => 'nullable|integer',
         ]);
 
         Livro::create($request->all());
 
-        return redirect()->route('index')
+        return redirect()->route('livros.index')
                          ->with('success', 'Livro cadastrado com sucesso!');
     }
 
@@ -38,7 +41,7 @@ class LivroController extends Controller
 
     public function edit(Livro $livro)
     {
-        return view('livros.edit', compact('livro'));
+        return view('edit', compact('livro'));
     }
 
     public function update(Request $request, Livro $livro)
@@ -49,7 +52,7 @@ class LivroController extends Controller
             'subtitulo' => 'nullable',
             'edicao' => 'nullable',
             'editora' => 'nullable',
-            'ano_publicacao' => 'nullable|integer',
+            'ano_de_publicacao' => 'nullable|integer',
         ]);
 
         $livro->update($request->all());

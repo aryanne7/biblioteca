@@ -26,9 +26,9 @@
                             @auth
                                 <a href="{{ url('/dashboard') }}" class="auth-link">Dashboard</a>
                             @else
-                                <a href="{{ route('login') }}" class="auth-link" style="margin-left: 80vw">Log in</a>
+                                <a href="{{ route('login') }}" class="auth-link" style="margin-left: 80vw">Login</a>
                                 @if (Route::has('register'))
-                                    <a href="{{ route('register') }}" class="auth-link" style="margin-left: 40px">Register</a>
+                                    <a href="{{ route('register') }}" class="auth-link" style="margin-left: 40px">Registrar</a>
                                 @endif
                             @endauth
                         </div>

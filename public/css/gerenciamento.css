@@ -1,0 +1,54 @@
+body {
+    background-color: lavender; /* Cor de fundo lilás */
+}
+
+.container {
+    margin-top: 30px; /* Espaçamento do topo */
+    background-color: white; /* Fundo do container */
+    padding: 20px;
+    border-radius: 8px; /* Borda arredondada */
+}
+
+h2 {
+    margin-top: 0; /* Remove o espaçamento superior padrão do h2 */
+}
+
+.pull-left {
+    float: left; /* Alinha à esquerda */
+}
+
+.pull-right {
+    float: right; /* Alinha à direita */
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Espaçamento inferior dos campos */
+}
+
+form {
+    max-width: 400px; /* Define a largura máxima do formulário */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+label {
+    text-align: left; /* Alinha os rótulos à esquerda */
+    display: block; /* Para garantir que cada rótulo ocupe uma linha */
+    margin-bottom: 5px; /* Espaçamento abaixo de cada rótulo */
+    width: 100%; /* Garante que o rótulo ocupe toda a largura do container */
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%; /* Garante que os inputs ocupem toda a largura disponível */
+    max-width: 400px; /* Largura máxima dos inputs */
+    margin: 0 auto; /* Centraliza os inputs */
+}
+
+button[type="submit"] {
+    margin-top: 15px; /* Espaçamento acima do botão */
+}
