@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tabela de livros</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
     <div class="container">
@@ -61,7 +62,7 @@
             @endforeach
         </table>
 
-        {!!  $livros->links('pagination::bootstrap-4')  !!}
+        {!! $livros->links('pagination::bootstrap-4') !!}
     </div>
 </body>
 </html>

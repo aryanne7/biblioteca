@@ -1,0 +1,17 @@
+.btn-purple {
+    background-color: #6b0f9c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-purple:hover {
+    background-color: #4a0c6b;
+}
+
+.btn-purple:focus {
+    outline: none;
+}
